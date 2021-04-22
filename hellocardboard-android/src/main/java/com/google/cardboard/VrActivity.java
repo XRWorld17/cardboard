@@ -62,10 +62,19 @@ public class VrActivity extends AppCompatActivity implements PopupMenu.OnMenuIte
 
   private GLSurfaceView glView;
 
+  public  void setDispMode(int modeindex) {
+
+      Log.d(TAG, "-xr- , setDispMode ：" + modeindex);
+      android.provider.Settings.System.putInt(this.getContentResolver(), "display_mode", modeindex);//2:3d
+
+  }
+
   @SuppressLint("ClickableViewAccessibility")
   @Override
   public void onCreate(Bundle savedInstance) {
     super.onCreate(savedInstance);
+
+    setDispMode(2);
 
     nativeApp = nativeOnCreate(getAssets());
 
