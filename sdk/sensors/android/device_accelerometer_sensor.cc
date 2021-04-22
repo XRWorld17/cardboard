@@ -112,7 +112,7 @@ void ParseAccelerometerEvent(const ASensorEvent& event,
   // The event values in ASensorEvent (event, acceleration and
   // magnetic) are all in the same union type so they can be
   // accessed by event.
-  sample->data = {event.vector.x, event.vector.y, event.vector.z};
+  sample->data = {event.vector.y, -event.vector.x, event.vector.z};
 }
 
 }  // namespace

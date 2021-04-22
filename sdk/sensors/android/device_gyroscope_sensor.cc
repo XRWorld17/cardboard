@@ -172,7 +172,7 @@ bool ParseGyroEvent(const ASensorEvent& event,
   // magnetic) are all in the same union type so they can be
   // accessed by event.
   if (event.type == ASENSOR_TYPE_GYROSCOPE) {
-    sample->data = {event.vector.x, event.vector.y, event.vector.z};
+    sample->data = {event.vector.y, -event.vector.x, event.vector.z};
     return true;
   } else if (event.type == ASENSOR_TYPE_GYROSCOPE_UNCALIBRATED) {
     // This is a special case when it is possible to initialize to
@@ -189,7 +189,7 @@ bool ParseGyroEvent(const ASensorEvent& event,
                      sensor_info->initial_system_gyro_bias[1],
                      sensor_info->initial_system_gyro_bias[2]);
     }
-    sample->data = {event.vector.x, event.vector.y, event.vector.z};
+    sample->data = {event.vector.y, -event.vector.x, event.vector.z};
     return true;
   } else {
     CARDBOARD_LOGE("ParseGyroEvent discarding unexpected sensor event type %d",

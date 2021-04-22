@@ -58,8 +58,8 @@ DisplayMetrics getDisplayMetrics() {
   const jfieldID ydpi_id =
       env->GetFieldID(screen_pixel_density_class_, "ydpi", "F");
 
-  const float xdpi = env->GetFloatField(screen_pixel_density, xdpi_id);
-  const float ydpi = env->GetFloatField(screen_pixel_density, ydpi_id);
+  const float xdpi = 395.0f;//env->GetFloatField(screen_pixel_density, xdpi_id);
+  const float ydpi = 398.0f;//env->GetFloatField(screen_pixel_density, ydpi_id);
   return {xdpi, ydpi};
 }
 

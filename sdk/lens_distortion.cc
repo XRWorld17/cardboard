@@ -45,7 +45,7 @@ LensDistortion::LensDistortion(const uint8_t* encoded_device_params, int size,
   std::vector<float> distortion_coefficients(
       device_params_.distortion_coefficients_size(), 0.0f);
   for (int i = 0; i < device_params_.distortion_coefficients_size(); i++) {
-    distortion_coefficients.at(i) = device_params_.distortion_coefficients(i);
+    //distortion_coefficients.at(i) = device_params_.distortion_coefficients(i);
   }
 
   distortion_ = std::unique_ptr<PolynomialRadialDistortion>(

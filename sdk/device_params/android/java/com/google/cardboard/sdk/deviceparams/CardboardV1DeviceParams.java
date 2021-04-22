@@ -23,14 +23,14 @@ public final class CardboardV1DeviceParams {
   public static final String CARDBOARD_V1_MODEL = "Cardboard v1";
   public static final CardboardDevice.DeviceParams.ButtonType CARDBOARD_V1_PRIMARY_BUTTON_TYPE =
       CardboardDevice.DeviceParams.ButtonType.MAGNET;
-  public static final float CARDBOARD_V1_SCREEN_TO_LENS_DISTANCE = 0.042f;
-  public static final float CARDBOARD_V1_INTER_LENS_DISTANCE = 0.06f;
+  public static final float CARDBOARD_V1_SCREEN_TO_LENS_DISTANCE = 0.11f;
+  public static final float CARDBOARD_V1_INTER_LENS_DISTANCE = 0.08f;
   public static final CardboardDevice.DeviceParams.VerticalAlignmentType
       CARDBOARD_V1_VERTICAL_ALIGNMENT_TYPE =
           CardboardDevice.DeviceParams.VerticalAlignmentType.BOTTOM;
-  public static final float CARDBOARD_V1_TRAY_TO_LENS_CENTER_DISTANCE = 0.035f;
-  public static final float[] CARDBOARD_V1_DISTORTION_COEFFS = {0.441f, 0.156f};
-  public static final float[] CARDBOARD_V1_FOV_ANGLES = {40.0f, 40.0f, 40.0f, 40.0f};
+  public static final float CARDBOARD_V1_TRAY_TO_LENS_CENTER_DISTANCE = 0.0255f;
+  public static final float[] CARDBOARD_V1_DISTORTION_COEFFS = {0.0f, 0.0f};
+  public static final float[] CARDBOARD_V1_FOV_ANGLES = {21.0f, 21.0f, 12.0f, 12.0f};
 
   private CardboardV1DeviceParams() {
   }
